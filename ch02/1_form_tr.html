@@ -10,6 +10,12 @@
 			margin-left: 8px;
 			margin-bottom: 10px;
 		}
+		th{
+			background-color: #777777;
+			color: white;
+			width: 130px;
+			align-content: center;
+		}
 		.box{
 			border-bottom: hidden; 
 			border-top: hidden;
@@ -30,13 +36,13 @@
 			<span style="margin-left: 2px;font-size: 15px"><strong>기본정보</strong></span>
 			<table border="1" style="margin-top: 5px">
 				<tr>
-					<td style="width: 130px; background-color: #777777; color: white"><center>✓ 이름</center></td>
+					<th>✓ 이름</th>
 					<td class="box">
 						<input type="text" name="name" id="name">
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 아이디</center></td>
+					<th>✓ 아이디</th>
 					<td class="box">
 						<input type="text" name="id" id="id">
 						<input type="button" value="✓ 아이디중복환인" id="re_id" style="border: 2.2px solid black">
@@ -45,7 +51,7 @@
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 비밀번호</center></td>
+					<th>✓ 비밀번호</th>
 					<td class="box">
 						<input type="password" name="password" id="password">			
 						<br><img src="talk.png" style="margin-left: 5px; width: 12px; height: 15px">
@@ -54,13 +60,13 @@
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 비밀번호 확인</center></td>
+					<th>✓ 비밀번호 확인</th>
 					<td class="box">
 						<input type="password" name="re_passworkd" id="re_passworkd">					
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 이메일</center></td>
+					<th>✓ 이메일</th>
 					<td class="box">
 						<input type="text" name="email_id" id="email_id"><span>@</span>
 						<input type="text" name="email_address" id="email_address">
@@ -73,7 +79,7 @@
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 연락처</center></td>
+					<th>✓ 연락처</th>
 					<td class="box">				
 						<span style="font-size: 13px">휴대전화</span>
 						<select>
@@ -101,21 +107,21 @@
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 우편번호</center></td>
+					<th>✓ 우편번호</th>
 					<td class="box">
 						<input type="text" name="number">
 						<input type="button" name="search" value="주소검색" style="border: 2.2px solid black">
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 주소</center></td>
+					<th>✓ 주소</th>
 					<td class="box">
 						<input type="text" name="address3" style="width: 500px">
 						<br><input type="text" name="address4">
 					</td>
 				</tr>		
 				<tr>
-					<td style="background-color: #777777; color: white"><center>정보수신 여부</center></td>
+					<th>정보수신 여부</th>
 					<td class="box">
 						<span style="font-size: 11px">서비스 및 이벤트 소식을</span>
 						<input type="radio" name="route"><span style="font-size: 11px">Email로 수신하겠습니다.</span>
@@ -129,13 +135,13 @@
 			<span style="margin-left: 2px;font-size: 15px"><strong>작가정보</strong></span>
 			<table border="1" style="margin-top: 5px">
 				<tr>
-					<td style="width: 130px; background-color: #777777; color: white"><center>프로필이미지</center></td>
+					<th>프로필이미지</th>
 					<td class="box">
 						<input type="file" multiple="multiple" name="profile">
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 필명</center></td>
+					<th>✓ 필명</th>
 					<td class="box">
 						<input type="text" name="write_name">
 						<br><img src="talk.png" style="margin-left: 5px; width: 12px; height: 15px">
@@ -143,13 +149,13 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>대표작</center></td>
+					<th>대표작</th>
 					<td class="box">
 						<input type="text" name="best" style="width: 500px">
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>수상내역</center></td>
+					<th>수상내역</th>
 					<td class="box">
 						<textarea rows="10" cols="69" name="text4"></textarea>
 						<br><img src="talk.png" style="margin-left: 5px; width: 12px; height: 15px">
@@ -157,7 +163,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>주요작품</center></td>
+					<th>주요작품</th>
 					<td class="box">
 						<input type="text" name="story" placeholder="스토리 제목을 입력하세요" style="width: 200px">
 						<input type="text" name="char" placeholder="해당 스토리의 역할을 입력하세요" style="width: 200px">
@@ -169,14 +175,14 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>작가정보공개설정</center></td>
+					<th>작가정보공개설정</th>
 					<td class="box">
 						<input type="radio" name="route1"><span style="font-size: 11px"><strong>공개</strong></span>
 						<input type="radio" name="route1"><span style="font-size: 11px"><strong>비공개</strong></span>
 					</td>
 				</tr>
 			</table>
-			<center><input type="button" value="저장" style="background-color: #555555; color: white">
+			<center><input type="button" value="저장" style="background-color: #555555; color: white; margin-bottom: 8px">
 			<input type="button" value="취소" style="margin-left: 4px; background-color: #777777; color: white"></center>
 		</div>
 		<div>
@@ -184,13 +190,13 @@
 			<span style="margin-left: 2px;font-size: 15px"><strong>이용자정보</strong></span>
 			<table border="1" style="margin-top: 5px">
 				<tr>
-					<td style="width: 130px; background-color: #777777; color: white"><center>✓ 소속(회사)</center></td>
+					<th>✓ 소속(회사)</th>
 					<td class="box">
 						<input type="text" name="com">
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>사업자등록번호</center></td>
+					<th>사업자등록번호</th>
 					<td class="box">
 						<input type="text" name="nb1">
 						<span>-</span>
@@ -200,7 +206,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 사업자등록증</center></td>
+					<th>✓ 사업자등록증</th>
 					<td class="box">
 						<input type="file" name="lincense">
 						<br><img src="talk.png" style="margin-left: 5px; width: 12px; height: 15px">
@@ -211,7 +217,7 @@
 			<br>
 			<table border="1">
 				<tr>
-					<td style="width: 130px; background-color: #777777; color: white"><center>✓ 분야</center></td>
+					<th>✓ 분야</th>
 					<td class="box">
 						<input type="checkbox" name="g1"><span style="font-size: 10px">영화</span>
 						<input type="checkbox" name="g2"><span style="font-size: 10px">방송</span>
@@ -224,7 +230,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>✓ 직종</center></td>
+					<th>✓ 직종</th>
 					<td class="box">
 						<input type="checkbox" name="j1"><span style="font-size: 10px">제작자</span>
 						<input type="checkbox" name="j2"><span style="font-size: 10px">투자자</span>
@@ -234,7 +240,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="background-color: #777777; color: white"><center>주요경력</center></td>
+					<th>주요경력</th>
 					<td class="box">
 						<span style="font-size: 2px"><strong>
 						주요경력사항을 등록해 주시기 바랍니다.</strong></span>
