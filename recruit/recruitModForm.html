@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>입사지원서</title>
+	<style type="text/css">
+		form{
+			width: 1200px;
+			margin: auto;
+		}
+		table, th, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		table{
+			width: 1010px;
+			margin: auto;
+		}
+		th, td{
+			padding: 10px;
+			text-align: center;
+		}
+		th{
+			background-color: rgb(42, 140,201, 1);
+			font-weight: bold;
+		}
+		div {
+			margin: auto; 
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 align="center">입사지원서</h1>
+	<form action="./recruitList.html" id="form">
+		<table>
+			<tr>
+				<th width="150px">지원분야</td>
+				<td width="200px">
+					<input type="text" name="field">
+				</td>
+				<th width="150px">경력구분</th>
+				<td width="200px">
+					<select>
+						<option value="experienced">선택
+						<option value="new">신입
+						<option value="experienced">경력
+					</select>
+				</td>
+				<th width="150px">희망연봉</th>
+				<td width="200px">
+					<input type="text" name="pay">
+				</td>
+			</tr>	
+		</table>
+		<br>
+		<h3 style="margin-left: 95px">□ 기본정보</h3>
+		<table>
+			<tr>
+				<td rowspan="6" width="300px"></th>
+				<th width="100px">성명</th>
+				<td>
+					<input type="text" name="name">
+				</td>
+				<th width="100px">한문</th>
+				<td>
+					<input type="text" name="n">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th>영문</th>
+				<td>
+					<input type="text" name="ne">
+				</td>
+				<th>생년월일</th>
+				<td>
+					<input type="date" name="birth">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th>전화번호</th>
+				<td>
+					<input type="tel" name="ne">
+				</td>
+				<th>비상연락망</th>
+				<td>
+					<input type="tel" name="ne1">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th>전자우편</th>
+				<td>
+					<input type="text" name="email">
+				</td>
+				<th>나이</th>
+				<td>
+					<input type="text" name="age">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th>주소</th>
+				<td colspan="3">
+					<input type="text" name="street" style="width: 500px">
+				</td>
+				<!-- 
+				<td></td>
+				<td></td>
+				 -->
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th>취미생활</th>
+				<td colspan="3">
+					<input type="text" name="hobby">
+				</td>
+				<!-- 
+				<td></td>
+				<td></td>
+				 -->
+			</tr>
+		</table>
+		<br>
+		<h3 style="margin-left: 95px">□ 학력사항 (최신이력이 가장 위로)</h3>
+		<table>
+			<tr>
+				<th width="350px">기간</th>
+				<th width="450px">출신학교</th>
+				<th width="100px">구분</th>
+				<th width="250px">학과</th>
+				<th width="200px">소재지</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="date" style="width: 80px"> ~ <input type="date"  style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<select>
+						<option>선택
+						<option>재학
+						<option>중퇴
+						<option>졸업
+					</select>	
+				</td>
+				<td>
+					<input type="text" style="width: 100px">
+				</td>
+				<td>
+					<input type="text" style="width: 50px">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="date" style="width: 80px"> ~ <input type="date"  style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<select>
+						<option>선택
+						<option>재학
+						<option>중퇴
+						<option>졸업
+					</select>
+				</td>
+				<td>
+					<input type="text" style="width: 100px">
+				</td>
+				<td>
+					<input type="text" style="width: 50px">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<h3 style="margin-left: 95px">□ 교육연수</h3>
+		<table>
+			<tr>
+				<th width="200px">연수기간</th>
+				<th width="200px">연수기관</th>
+				<th>연수과정 및 내용</th>
+			</tr>
+			<tbody height="150px">
+				<tr>
+					<td>
+						<input type="date"> ~ 
+						<br><input type="date">
+					</td>
+					<td>
+						<input type="text"
+					</td>
+					<td>
+						<textarea rows="10" cols="70"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<h3 style="margin-left: 95px">□ 자격사항</h3>
+		<table>
+			<tr>
+				<th width="25%">취득일</th>
+				<th width="25%">종류 및 등급</th>
+				<th width="10%">발령처</th>
+				<th width="40%">보유기술 및 수준</th>
+			</tr>
+			<tr>
+				<td height="50px">
+					<input type="date">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text" style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td height="50px">
+					<input type="date">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text" style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<h3 style="margin-left: 95px">□ 경력사항(4대 보험 가입 경력)</h3>
+		<table>
+			<tr>
+				<th width="25%">활동기간</td>
+				<th width="20%">기관</td>
+				<th width="20%">담당업무</td>
+				<th width="35%">경험 및 습득역량</td>
+			</tr>
+			<tr>
+				<td height="10px">
+					<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td height="10px">
+					<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+			<tr>
+				<td height="10px">
+					<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+				<td>
+					<input type="text">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<div>
+			<input type="submit" value=제출 style="width: 80px; height: 40px; font-size: 15px">
+			<input type="button" value=취소 style="width: 80px; height: 40px; font-size: 15px" onclick="location.href='recruitView.html'">
+		</div>		
+	</form>
+	<script type="text/javascript">
+		function here(){
+			alert("찾으실 수 없습니다");
+			document.getElementById("form").submit();
+		}
+	</script>
+</body>
+</html>
