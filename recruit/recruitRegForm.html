@@ -59,7 +59,9 @@
 		<h3 style="margin-left: 95px">□ 기본정보</h3>
 		<table>
 			<tr>
-				<td rowspan="6" width="300px"></th>
+				<td rowspan="6" width="300px">
+					<input type="file" accept="img/*" id="file">
+				</th>
 				<th width="100px">성명</th>
 				<td>
 					<input type="text" name="name">
@@ -303,6 +305,15 @@
 		function here(){
 			alert("찾으실 수 없습니다");
 			document.getElementById("form").submit();
+		}
+		var submit = 
+		document.getElementById('file');
+		submit.onclick = showImage;
+		
+		function showImage(){
+			var newImage = document.getElementById('image-show').lastElementChild;
+			newImage.style.visibility="visible";
+			document.getElementById('fileName').textContent = null;
 		}
 	</script>
 </body>

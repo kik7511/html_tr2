@@ -112,7 +112,7 @@
 			<tr>
 				<!-- <td></td> -->
 				<th>취미생활</th>
-				<td colspan="3">
+				<td colspan="3" style="text-align: left;">
 					<input type="text" name="hobby" value="독서">
 				</td>
 				<!-- 
@@ -123,7 +123,10 @@
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 학력사항 (최신이력이 가장 위로)</h3>
-		<input type= "button" value="추가하기" style="float: right; margin-right: 100px" onclick="addrow()">
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow()">
+			<input type= "button" value="삭제하기" onclick="deleterow(-1)">
+		</div>
 		<br><br>
 		<table id="ad">
 			<tr>
@@ -133,50 +136,57 @@
 				<th width="250px">학과</th>
 				<th width="200px">소재지</th>
 			</tr>
-			<tr>
-				<td>
-					<input type="text" value="2012 ~ 2016" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**대학교" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="졸업" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**과"  style="width: 100px; text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**"  style="width: 50px; text-align: center;">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="text" value="2008 ~ 2011" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**고등학교" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="졸업" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**"  style="width: 100px; text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**"  style="width: 50px; text-align: center;">
-				</td>
-			</tr>
+			<tbody id="de">
+				<tr>
+					<td>
+						<input type="text" value="2012 ~ 2016" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**대학교" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="졸업" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**과"  style="width: 100px; text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**"  style="width: 50px; text-align: center;">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" value="2008 ~ 2011" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**고등학교" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="졸업" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**"  style="width: 100px; text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**"  style="width: 50px; text-align: center;">
+					</td>
+				</tr>
+			</tbody>
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 교육연수</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow1()">
+			<input type= "button" value="삭제하기" onclick="deleterow1(-1)">
+		</div>
+		<br><br>
+		<table id="ad1">
 			<tr>
 				<th width="200px">연수기간</th>
 				<th width="200px">연수기관</th>
 				<th>연수과정 및 내용</th>
 			</tr>
-			<tbody height="150px">
+			<tbody height="150px" id="de1">
 				<tr>
 					<td>
 						<input type="text" value="2016 ~ 2020" style="text-align: center;">
@@ -192,95 +202,109 @@
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 자격사항</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow2()">
+			<input type= "button" value="삭제하기" onclick="deleterow2(-1)">
+		</div>
+		<br><br>
+		<table id="ad2">
 			<tr>
 				<th width="25%">취득일</th>
 				<th width="25%">종류 및 등급</th>
 				<th width="10%">발령처</th>
 				<th width="40%">보유기술 및 수준</th>
 			</tr>
-			<tr>
-				<td height="50px">
-					<input type="text" value="2021.06.07"  style="width: 100px; text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**급"  style="width: 100px; text-align: center;">
-				</td>
-				<td>
-					<input type="text" style="width: 80px; text-align: center;" value="**기관">
-				</td>
-				<td>
-					<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
-				</td>
-			</tr>
-			<tr>
-				<td height="50px">
-					<input type="text" value="2021.12.07"  style="width: 100px; text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="**급"  style="width: 100px; text-align: center;">
-				</td>
-				<td>
-					<input type="text" style="width: 80px; text-align: center;" value="**기관">
-				</td>
-				<td>
-					<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
-				</td>
-			</tr>
+			<tbody id="de2"
+				<tr>
+					<td height="50px">
+						<input type="text" value="2021.06.07"  style="width: 100px; text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**급"  style="width: 100px; text-align: center;">
+					</td>
+					<td>
+						<input type="text" style="width: 80px; text-align: center;" value="**기관">
+					</td>
+					<td>
+						<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
+					</td>
+				</tr>
+				<tr>
+					<td height="50px">
+						<input type="text" value="2021.12.07"  style="width: 100px; text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="**급"  style="width: 100px; text-align: center;">
+					</td>
+					<td>
+						<input type="text" style="width: 80px; text-align: center;" value="**기관">
+					</td>
+					<td>
+						<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
+					</td>
+				</tr>
+			</tbody>
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 경력사항(4대 보험 가입 경력)</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow3()">
+			<input type= "button" value="삭제하기" onclick="deleterow3(-1)">
+		</div>
+		<br><br>
+		<table id="ad3">
 			<tr>
 				<th width="25%">활동기간</td>
 				<th width="20%">기관</td>
 				<th width="20%">담당업무</td>
 				<th width="35%">경험 및 습득역량</td>
 			</tr>
-			<tr>
-				<td height="10px">
-					<input type="text" value="2016 ~ 2020" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="***기관" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="***" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
-				</td>
-			</tr>
-			<tr>
-				<td height="10px">
-					<input type="text" value="2020 ~ 2021" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="***기관" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="***" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
-				</td>
-			</tr>
-			<tr>
-				<td height="10px">
-					<input type="text" value="2021 ~ 2022" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="***기관" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="***" style="text-align: center;">
-				</td>
-				<td>
-					<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
-				</td>
-			</tr>
+			<tbody id="de3">
+				<tr>
+					<td height="10px">
+						<input type="text" value="2016 ~ 2020" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="***기관" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="***" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
+					</td>
+				</tr>
+				<tr>
+					<td height="10px">
+						<input type="text" value="2020 ~ 2021" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="***기관" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="***" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
+					</td>
+				</tr>
+				<tr>
+					<td height="10px">
+						<input type="text" value="2021 ~ 2022" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="***기관" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="***" style="text-align: center;">
+					</td>
+					<td>
+						<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
+					</td>
+				</tr>
+			</tbody>
 		</table>
-		<br>
+		<br><br>
 		<div>
 			<input type="submit" value=제출 style="width: 80px; height: 40px; font-size: 15px">
 			<input type="button" value=취소 style="width: 80px; height: 40px; font-size: 15px" onclick="location.href='recruitView.html'">
@@ -300,7 +324,57 @@
 			cell3.innerText = '';
 			cell4.innerText = '';
 			cell5.innerText = '';
-		}	
+		}
+		function deleterow(){
+			const table = document.getElementById('de');
+			const newRow = table.deleteRow(-1)
+		}
+		function addrow1(){
+			const table = document.getElementById('ad1');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			cell1.innerText = '';
+			cell2.innerText = '';
+			cell3.innerText = '';
+		}
+		function deleterow1(){
+			const table = document.getElementById('de1');
+			const newRow = table.deleteRow(-1)
+		}
+		function addrow2(){
+			const table = document.getElementById('ad2');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			const cell4 = newRow.insertCell(3);
+			cell1.innerText = '';
+			cell2.innerText = '';
+			cell3.innerText = '';
+			cell3.innerText = '';
+		}
+		function deleterow2(){
+			const table = document.getElementById('de2');
+			const newRow = table.deleteRow(-1)
+		}
+		function addrow3(){
+			const table = document.getElementById('ad3');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			const cell4 = newRow.insertCell(3);
+			cell1.innerText = '';
+			cell2.innerText = '';
+			cell3.innerText = '';
+			cell3.innerText = '';
+		}
+		function deleterow3(){
+			const table = document.getElementById('de3');
+			const newRow = table.deleteRow(-1)
+		}
 		function here(){
 			alert("찾으실 수 없습니다");
 			document.getElementById("form").submit();
