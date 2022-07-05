@@ -39,21 +39,6 @@
 			<tr>
 				<th width="150px">지원분야</td>
 				<td width="200px">
-					<input type="text" name="field" style="text-align: center;" value="총무과">
-				</td>
-				<th width="150px">경력구분</th>
-				<td width="200px">
-					<input type="text" value="신입" style="text-align: center;">
-				</td>
-				<th width="150px">희망연봉</th>
-				<td width="200px">
-					<input type="text" value="2100만원" style="text-align: center;">
-				</td>
-			</tr>	
-		<table>
-			<tr>
-				<th width="150px">지원분야</td>
-				<td width="200px">
 					<input type="text" name="field" value=" 총무과" style="text-align: center;">
 				</td>
 				<th width="150px">경력구분</th>
@@ -138,7 +123,9 @@
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 학력사항 (최신이력이 가장 위로)</h3>
-		<table>
+		<input type= "button" value="추가하기" style="float: right; margin-right: 100px" onclick="addrow()">
+		<br><br>
+		<table id="ad">
 			<tr>
 				<th width="350px">기간</th>
 				<th width="450px">출신학교</th>
@@ -237,7 +224,7 @@
 					<input type="text" style="width: 80px; text-align: center;" value="**기관">
 				</td>
 				<td>
-					<input type="text" disabled value="무엇이든 잘합니다" style="text-align: center;">
+					<input type="text" value="무엇이든 잘합니다" style="text-align: center;">
 				</td>
 			</tr>
 		</table>
@@ -300,6 +287,20 @@
 		</div>		
 	</form>
 	<script type="text/javascript">
+		function addrow(){
+			const table = document.getElementById('ad');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			const cell4 = newRow.insertCell(3);
+			const cell5 = newRow.insertCell(4);
+			cell1.innerText = '';
+			cell2.innerText = '';
+			cell3.innerText = '';
+			cell4.innerText = '';
+			cell5.innerText = '';
+		}	
 		function here(){
 			alert("찾으실 수 없습니다");
 			document.getElementById("form").submit();
