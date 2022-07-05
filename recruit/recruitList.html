@@ -24,11 +24,14 @@
 			border-collapse: collapse;
 			text-align: center;
 		}
-		th {
+		.line {
 			border-top-color: rgb(42, 140,201, 1);
 			height: 10px;
 			font-weight: bold;
 			color: rgb(42, 140,201, 1);
+		}
+		.name{
+			color: black;
 		}
 		table{
 			margin: auto;
@@ -44,13 +47,13 @@
 <body>
 	<div>		
 		<h3>
-			<span id="main_title"><center>입사지원</center></span>
+			<span id="main_title"><center>지원현황</center></span>
 			<div class="underline" style="margin-top: 10px;"></div>
 			<div id="sub_title" style="margin-top: 10px;"><span><center>회사별 공고 및 안내를 학인해 보시기 바랍니다.</center></span></div> 
 		</h3>
 	</div>	
 	<form action="recruitView.html" method="get" style="float: right; margin-right:515px">
-		<input type="text" id="searchWord" name="searchWord" placeholder="검색어를 입력하세요"
+		<input type="text" id="search" name="search" placeholder="검색어를 입력하세요"
 			maxlength="50" size="20">
 		<button class="searchButton">검색</button>
 	</form>
@@ -59,16 +62,16 @@
 	<form method="post" action="./recruitRegForm.html" id="form">
 		<table>
 			<tr>
-				<th width="50px">번호</th>
-				<th width="50px">이름</th>
-				<th width="100px">생년월일</th>
-				<th width="180px">이메일</th>
-				<th width="180px">전화번호</th>
-				<th width="300px">주소</th>
+				<th class="line" width="50px">번호</th>
+				<th class="line" width="50px">이름</th>
+				<th class="line" width="100px">생년월일</th>
+				<th class="line" width="180px">이메일</th>
+				<th class="line" width="180px">전화번호</th>
+				<th class="line" width="300px">주소</th>
 			</tr>
 			<tr>
 				<td>1</td>
-				<td><a href="./recruitView.html">김철수</a></td>
+				<td class="name"><a href="./recruitView.html">김철수</a></td>
 				<td>92.06.05</td>
 				<td>keitthh@naver.com</td>
 				<td>010-****-****</td>
@@ -76,7 +79,7 @@
 			</tr>
 			<tr>
 				<td>2</td>
-				<td><a href="./recruitView.html">이영희</a></td>
+				<td class="name"><a href="./recruitView.html">이영희</a></td>
 				<td>88.09.04</td>
 				<td>reqrith488@gmail.com</td>
 				<td>010-****-****</td>
@@ -84,7 +87,7 @@
 			</tr>
 			<tr>
 				<td>3</td>
-				<td><a href="./recruitView.html">박상수</a></td>
+				<td class="name"><a href="./recruitView.html">박상수</a></td>
 				<td>91.12.11</td>
 				<td>liteiwuu049@daum.net</td>
 				<td>010-****-****</td>
@@ -92,7 +95,7 @@
 			</tr>
 			<tr>
 				<td>4</td>
-				<td><a href="./recruitView.html">최민주</a></td>
+				<td class="name"><a href="./recruitView.html">최민주</a></td>
 				<td>95.03.05</td>
 				<td>ottowiu12@naver.com</td>
 				<td>010-****-****</td>
@@ -105,6 +108,22 @@
 		</div>
 	</form>
 	<script type="text/javascript">
+	/* 
+		function filter(){
+			let search = document.document.getElementById("search").value.toLowerCase();
+			let listInner = document.getElementsByClassName("line");
+			
+			for(let i=0; i<listInner.length; i++){
+				name=listInner[i].getElementsByClassName("name");
+				if(name[0].innerHTML.toLowerCase().indexOf(search)!=-1){
+					listInner[i].style.display="flex"
+				}else{
+					listInner[i].style.display="none"
+				}
+			}
+		}
+	
+ */	
 		var searchWord=document.getElementById('searchWord');
 		var searchButton=document.getElementById('searchButton');
 		searchWord.addEventListener('key up', function(event){
@@ -115,6 +134,7 @@
 				window.location.href=searchButton.href;
 			}
 		});
+	 	
 		function here(){
 			alert("찾으실 수 없습니다");
 			document.getElementById("form").submit();
