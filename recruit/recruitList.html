@@ -108,29 +108,13 @@
 		</div>
 	</form>
 	<script type="text/javascript">
-	/* 
-		function filter(){
-			let search = document.document.getElementById("search").value.toLowerCase();
-			let listInner = document.getElementsByClassName("line");
-			
-			for(let i=0; i<listInner.length; i++){
-				name=listInner[i].getElementsByClassName("name");
-				if(name[0].innerHTML.toLowerCase().indexOf(search)!=-1){
-					listInner[i].style.display="flex"
-				}else{
-					listInner[i].style.display="none"
-				}
-			}
-		}
-	
- */	
-		var searchWord=document.getElementById('searchWord');
-		var searchButton=document.getElementById('searchButton');
+		var searchWord=document.getElementById("search");
+		var searchButton=document.getElementById("searchButton");
 		searchWord.addEventListener('key up', function(event){
-			if(event.keyCode === null){
+			if(event.keyCode == null){
 				event.preventDefault();
 			}
-			if(event.keyCode === 13){
+			if(event.keyCode == 13){
 				window.location.href=searchButton.href;
 			}
 		});
