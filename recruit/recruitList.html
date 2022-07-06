@@ -41,6 +41,14 @@
 			margin: auto;
 			text-align: center;
 		}
+		#value {
+			max-width: 300px;
+			size: 20px;
+		}
+		.item {
+			padding: 10px;		
+		}
+		
 	</style>
 </head>
 
@@ -52,10 +60,8 @@
 			<div id="sub_title" style="margin-top: 10px;"><span><center>회사별 공고 및 안내를 학인해 보시기 바랍니다.</center></span></div> 
 		</h3>
 	</div>	
-	<form action="recruitView.html" method="get" style="float: right; margin-right:515px">
-		<input type="text" id="search" name="search" placeholder="검색어를 입력하세요"
-			maxlength="50" size="20">
-		<button class="searchButton">검색</button>
+	<form method="get" style="float: right; margin-right:515px">
+		<input type="text" id="value" name="search" placeholder="검색어를 입력하세요" onkeyup="filter()">
 	</form>
 	<br>
 	<br>
@@ -69,38 +75,40 @@
 				<th class="line" width="180px">전화번호</th>
 				<th class="line" width="300px">주소</th>
 			</tr>
-			<tr>
-				<td>1</td>
-				<td class="name"><a href="./recruitView.html">김철수</a></td>
-				<td>92.06.05</td>
-				<td>keitthh@naver.com</td>
-				<td>010-****-****</td>
-				<td>경기도 의왕시 내손2동 **아파트</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td class="name"><a href="./recruitView.html">이영희</a></td>
-				<td>88.09.04</td>
-				<td>reqrith488@gmail.com</td>
-				<td>010-****-****</td>
-				<td>경상남도 경주시 ***빌라</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td class="name"><a href="./recruitView.html">박상수</a></td>
-				<td>91.12.11</td>
-				<td>liteiwuu049@daum.net</td>
-				<td>010-****-****</td>
-				<td>경기도 안산시 중앙로 ***단지</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td class="name"><a href="./recruitView.html">최민주</a></td>
-				<td>95.03.05</td>
-				<td>ottowiu12@naver.com</td>
-				<td>010-****-****</td>
-				<td>인천광역시 **동**아파트</td>
-			</tr>
+			<tbody>
+				<tr class="item">
+					<td>1</td>
+					<td class="name"><a href="./recruitView.html">김철수</a></td>
+					<td>92.06.05</td>
+					<td>keitthh@naver.com</td>
+					<td>010-****-****</td>
+					<td>경기도 의왕시 내손2동 **아파트</td>
+				</tr>
+				<tr class="item">
+					<td>2</td>
+					<td class="name"><a href="./recruitView.html">이영희</a></td>
+					<td>88.09.04</td>
+					<td>reqrith488@gmail.com</td>
+					<td>010-****-****</td>
+					<td>경상남도 경주시 ***빌라</td>
+				</tr>
+				<tr class="item">
+					<td>3</td>
+					<td class="name"><a href="./recruitView.html">박상수</a></td>
+					<td>91.12.11</td>
+					<td>liteiwuu049@daum.net</td>
+					<td>010-****-****</td>
+					<td>경기도 안산시 중앙로 ***단지</td>
+				</tr>
+				<tr class="item">
+					<td>4</td>
+					<td class="name"><a href="./recruitView.html">최민주</a></td>
+					<td>95.03.05</td>
+					<td>ottowiu12@naver.com</td>
+					<td>010-****-****</td>
+					<td>인천광역시 **동**아파트</td>
+				</tr>
+			</tbody>
 		</table>	
 		<br>
 		<div id="id">
@@ -108,17 +116,20 @@
 		</div>
 	</form>
 	<script type="text/javascript">
-		var searchWord=document.getElementById("search");
-		var searchButton=document.getElementById("searchButton");
-		searchWord.addEventListener('key up', function(event){
-			if(event.keyCode == null){
-				event.preventDefault();
+		function filter(){
+			var value, name, item, i;
+			value = document.getElementById("value").value.toUpperCase();
+			item = document.getElementsByClassName("item");
+			
+			for(i=0; i<item.length; i++){
+				name = item[i].getElementsByClassName("name");
+				if(name[0].innerHTML.toUpperCase().indexOf(value)>-1){
+					item[i].style.display = "";
+				}else {
+					item[i].style.display = "none";	
+				}
 			}
-			if(event.keyCode == 13){
-				window.location.href=searchButton.href;
-			}
-		});
-	 	
+		}
 		function here(){
 			alert("찾으실 수 없습니다");
 			document.getElementById("form").submit();

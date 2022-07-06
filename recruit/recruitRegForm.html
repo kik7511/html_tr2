@@ -129,8 +129,8 @@
 			<tr>
 				<!-- <td></td> -->
 				<th>취미생활</th>
-				<td colspan="3">
-					<input type="text" name="hobby">
+				<td colspan="3" style="text-align: left;">
+					<input type="text" name="hobby" style="width: 500px">
 				</td>
 				<!-- 
 				<td></td>
@@ -140,7 +140,12 @@
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 학력사항 (최신이력이 가장 위로)</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow()" style="border: 1px solid">
+			<input type= "button" value="삭제하기" onclick="deleterow(-1)" style="border: 1px solid">
+		</div>
+		<br><br>
+		<table id="ad">
 			<tr>
 				<th width="350px">기간</th>
 				<th width="450px">출신학교</th>
@@ -148,60 +153,67 @@
 				<th width="250px">학과</th>
 				<th width="200px">소재지</th>
 			</tr>
-			<tr>
-				<td>
-					<input type="date" style="width: 80px"> ~ <input type="date"  style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<select>
-						<option>선택
-						<option>재학
-						<option>중퇴
-						<option>졸업
-					</select>	
-				</td>
-				<td>
-					<input type="text" style="width: 100px">
-				</td>
-				<td>
-					<input type="text" style="width: 50px">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="date" style="width: 80px"> ~ <input type="date"  style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<select>
-						<option>선택
-						<option>재학
-						<option>중퇴
-						<option>졸업
-					</select>
-				</td>
-				<td>
-					<input type="text" style="width: 100px">
-				</td>
-				<td>
-					<input type="text" style="width: 50px">
-				</td>
-			</tr>
+			<tbody id="de">
+				<tr>
+					<td>
+						<input type="date" style="width: 80px"> ~ <input type="date"  style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<select>
+							<option>선택
+							<option>재학
+							<option>중퇴
+							<option>졸업
+						</select>	
+					</td>
+					<td>
+						<input type="text" style="width: 100px">
+					</td>
+					<td>
+						<input type="text" style="width: 50px">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="date" style="width: 80px"> ~ <input type="date"  style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<select>
+							<option>선택
+							<option>재학
+							<option>중퇴
+							<option>졸업
+						</select>
+					</td>
+					<td>
+						<input type="text" style="width: 100px">
+					</td>
+					<td>
+						<input type="text" style="width: 50px">
+					</td>
+				</tr>
+			</tbody>
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 교육연수</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow1()" style="border: 1px solid">
+			<input type= "button" value="삭제하기" onclick="deleterow1(-1)" style="border: 1px solid">
+		</div>
+		<br><br>
+		<table id="ad1">
 			<tr>
 				<th width="200px">연수기간</th>
 				<th width="200px">연수기관</th>
 				<th>연수과정 및 내용</th>
 			</tr>
-			<tbody height="150px">
+			<tbody height="150px" id="de1">
 				<tr>
 					<td>
 						<input type="date"> ~ 
@@ -218,98 +230,112 @@
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 자격사항</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow2()" style="border: 1px solid">
+			<input type= "button" value="삭제하기" onclick="deleterow2(-1)" style="border: 1px solid">
+		</div>
+		<br><br>
+		<table id="ad2">
 			<tr>
 				<th width="25%">취득일</th>
 				<th width="25%">종류 및 등급</th>
 				<th width="10%">발령처</th>
 				<th width="40%">보유기술 및 수준</th>
 			</tr>
-			<tr>
-				<td height="50px">
-					<input type="date">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text" style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-			</tr>
-			<tr>
-				<td height="50px">
-					<input type="date">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text" style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-			</tr>
+			<tbody id="de2"
+				<tr>
+					<td height="50px">
+						<input type="date">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text" style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+				<tr>
+					<td height="50px">
+						<input type="date">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text" style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+			</tbody>
 		</table>
 		<br>
 		<h3 style="margin-left: 95px">□ 경력사항(4대 보험 가입 경력)</h3>
-		<table>
+		<div style="float: right; margin-right: 100px">
+			<input type= "button" value="추가하기" onclick="addrow3()" style="border: 1px solid">
+			<input type= "button" value="삭제하기" onclick="deleterow3(-1)" style="border: 1px solid">
+		</div>
+		<br><br>
+		<table id="ad3">
 			<tr>
 				<th width="25%">활동기간</td>
 				<th width="20%">기관</td>
 				<th width="20%">담당업무</td>
 				<th width="35%">경험 및 습득역량</td>
 			</tr>
-			<tr>
-				<td height="10px">
-					<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-			</tr>
-			<tr>
-				<td height="10px">
-					<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-			</tr>
-			<tr>
-				<td height="10px">
-					<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-				<td>
-					<input type="text">
-				</td>
-			</tr>
+			<tbody id="de3">
+				<tr>
+					<td height="10px">
+						<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+				<tr>
+					<td height="10px">
+						<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+				<tr>
+					<td height="10px">
+						<input type="date" style="width: 80px"> ~ <input type="date" style="width: 80px">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+					<td>
+						<input type="text">
+					</td>
+				</tr>
+			
 		</table>
 		<br>
 		<div>
-			<input type="submit" value=제출 style="width: 80px; height: 40px; font-size: 15px;">
-			<input type="button" value=취소 style="width: 80px; height: 40px; font-size: 15px" onclick="location.href='recruitList.html'">
+			<input type="submit" value=제출 style="width: 80px; height: 40px; font-size: 15px; border: 1px solid">
+			<input type="button" value=취소 style="width: 80px; height: 40px; font-size: 15px; border: 1px solid" onclick="location.href='recruitList.html'">
 		</div>		
 	</form>
 	<script type="text/javascript">
@@ -337,6 +363,70 @@
 		inputImage.addEventListener("change", e => {
 		    readImage(e.target)
 		})
+		function addrow(){
+			const table = document.getElementById('ad');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			const cell4 = newRow.insertCell(3);
+			const cell5 = newRow.insertCell(4);
+			cell1.innerHTML = "<input type='date' name='start'>" + "~" + "<input type='date' name='end'>";
+			cell2.innerHTML = "<input type='text' name='school'>";
+			cell3.innerHTML = "<select><option>선택<option>재학<option>중퇴<option>졸업</select>";
+			cell4.innerHTML = "<input type='text'>";
+			cell5.innerHTML = "<input type='text'>";
+		}
+		function deleterow(){
+			const table = document.getElementById('de');
+			const newRow = table.deleteRow(-1)
+		}
+		function addrow1(){
+			const table = document.getElementById('ad1');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			cell1.innerHTML = "<input type='date' name='start'>" + "~" + "<input type='date' name='end'>";
+			cell2.innerHTML = "<input type='text'>";
+			cell3.innerHTML = "<textarea>";
+		}
+		function deleterow1(){
+			const table = document.getElementById('de1');
+			const newRow = table.deleteRow(-1)
+		}
+		function addrow2(){
+			const table = document.getElementById('ad2');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			const cell4 = newRow.insertCell(3);
+			cell1.innerHTML = "<input type='date'>";
+			cell2.innerHTML = "<input type='text'>";
+			cell3.innerHTML = "<input type='text'>";
+			cell4.innerHTML = "<input type='text'>";
+		}
+		function deleterow2(){
+			const table = document.getElementById('de2');
+			const newRow = table.deleteRow(-1)
+		}
+		function addrow3(){
+			const table = document.getElementById('ad3');
+			const newRow = table.insertRow();
+			const cell1 = newRow.insertCell(0);
+			const cell2 = newRow.insertCell(1);
+			const cell3 = newRow.insertCell(2);
+			const cell4 = newRow.insertCell(3);
+			cell1.innerHTML = "<input type='date' name='start'>" + "~" + "<input type='date' name='end'>";
+			cell2.innerHTML = "<input type='text'>";
+			cell3.innerHTML = "<input type='text'>";
+			cell4.innerHTML = "<input type='text'>";
+		}
+		function deleterow3(){
+			const table = document.getElementById('de3');
+			const newRow = table.deleteRow(-1)
+		}
 	</script>
 </body>
 </html>
