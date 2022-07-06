@@ -15,13 +15,11 @@
 			height: 50px;	
 		}
 		#bbb{
-			background-color: gray;
 			float: left;
 			width: 200px;
 			height: 180px;
 		}
 		#ccc{
-			background-color: green;
 			height: 130px;
 		}
 		#ddd{
@@ -33,7 +31,8 @@
 		}
 		table, th, td {
 			border: 1px solid;
-			border-collapse:collapse; 
+			border-collapse:collapse;
+			text-align: center; 
 		}
 		table {
 			margin: auto;
@@ -49,7 +48,7 @@
 		<div style="height: 30px;">헤더</div>
 		<div id="aaa">GNV</div>
 		<div id="bbb">
-			<ul>
+			<ul type="none">
 				<li>회원 관리
 				<li>사이트 관리
 				<li>시스템 관리
@@ -61,8 +60,9 @@
 		</div>
 		<div id="ccc">
 			<span style="font-size: 30px;"><center>회원관리</center></span>
-			<table style="width: 780px;">
+			<table style="width: 780px; margin-top: 10px;">
 				<tr>
+					<th><input type="checkbox" name="number" onclick="selectAll(this)">
 					<th>no</th>
 					<th>관리자여부</th>
 					<th>이름</th>
@@ -75,6 +75,7 @@
 					<th>탈퇴여부</th>
 				</tr>
 				<tr>
+					<td><input type="checkbox" name="number"></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -85,11 +86,46 @@
 					<td></td>
 					<td></td>
 					<td></td>
-				</tr>			
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="number"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="number"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
 			</table>
 		</div>
 		<div></div>
 		<div id="ddd"><span style="margin-right: 150px;">Copy right. 1230-Tony Teacher</span></div>
 	</div>
+	<script type="text/javascript">
+		function selectAll(selectAll){
+			const checkboxes = document.getElementsByName('number');
+			checkboxes.forEach((checkbox) => {
+				checkbox.checked = selectAll.checked;				
+			})
+		}
+		
+	</script>
 </body>
 </html>
