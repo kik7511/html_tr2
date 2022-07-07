@@ -40,84 +40,71 @@
 		tr {
 			height: 20px;
 		}
+		input[type=text] {
+			border: none;		
+		}
+		#no {
+			width: 30px;
+		}
+		.no {
+			width: 60px;
+		}
 	</style>
 </head>
 
 <body>
-	<div id="abc">
-		<div style="height: 30px;">헤더</div>
-		<div id="aaa">GNV</div>
-		<div id="bbb">
-			<ul type="none">
-				<li>회원 관리
-				<li>사이트 관리
-				<li>시스템 관리
-				<li>커뮤니케이션 관리
-				<li>템플릿 관리
-				<li>로그 관리
-				<li>통계
-			</ul>
+	<form>
+		<div id="abc">
+			<div style="height: 30px;">헤더</div>
+			<div id="aaa">GNV</div>
+			<div id="bbb">
+				<ul type="none">
+					<li>회원 관리
+					<li>사이트 관리
+					<li>시스템 관리
+					<li>커뮤니케이션 관리
+					<li>템플릿 관리
+					<li>로그 관리
+					<li>통계
+				</ul>
+			</div>
+			<div id="ccc">
+				<span style="font-size: 30px;"><center>회원관리</center></span>
+				<table style="width: 780px; margin-top: 10px;">
+					<tr>
+						<th><input type="checkbox" name="number" onclick="selectAll(this)">
+						<th>no</th>
+						<th>관리자여부</th>
+						<th>이름</th>
+						<th>아이디</th>
+						<th>이메일</th>
+						<th>핸드폰</th>
+						<th>마지막 로그인</th>
+						<th>회원가입일</th>
+						<th>최근수정일</th>
+						<th>탈퇴여부</th>
+					</tr>
+					<tbody id="tbody" onkeyup="addrow()";>
+						<tr>
+							<td><input type="checkbox" name="number"></td>
+							<td><input type="text" id="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div></div>
+			<div id="ddd"><span style="margin-right: 150px;">Copy right. 1230-Tony Teacher</span></div>
 		</div>
-		<div id="ccc">
-			<span style="font-size: 30px;"><center>회원관리</center></span>
-			<table style="width: 780px; margin-top: 10px;">
-				<tr>
-					<th><input type="checkbox" name="number" onclick="selectAll(this)">
-					<th>no</th>
-					<th>관리자여부</th>
-					<th>이름</th>
-					<th>아이디</th>
-					<th>이메일</th>
-					<th>핸드폰</th>
-					<th>마지막 로그인</th>
-					<th>회원가입일</th>
-					<th>최근수정일</th>
-					<th>탈퇴여부</th>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="number"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="number"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="number"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
-		<div></div>
-		<div id="ddd"><span style="margin-right: 150px;">Copy right. 1230-Tony Teacher</span></div>
-	</div>
+	</form>
 	<script type="text/javascript">
 		function selectAll(selectAll){
 			const checkboxes = document.getElementsByName('number');
@@ -125,7 +112,45 @@
 				checkbox.checked = selectAll.checked;				
 			})
 		}
-		
+		function addrow(){
+			var row, cell_no, cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9;
+			
+			if(window.event.keyCode == 13) {
+				row = document.all["tbody"].insertRow();
+				cell_no = row.insertCell();
+				cell_no.innerHTML = "<input type='checkbox' name='number'>"
+				
+				cell1 = row.insertCell();
+				cell1.innerHTML = "<input type='text' id='no'>"
+				
+				cell2 = row.insertCell();
+				cell2.innerHTML = "<input type='text' class='no'>"
+				
+				cell2 = row.insertCell();
+				cell2.innerHTML = "<input type='text' class='no'>"
+				
+				cell3 = row.insertCell();
+				cell3.innerHTML = "<input type='text' class='no'>"
+				
+				cell4 = row.insertCell();
+				cell4.innerHTML = "<input type='text' class='no'>"
+				
+				cell5 = row.insertCell();
+				cell5.innerHTML = "<input type='text' class='no'>"
+				
+				cell6 = row.insertCell();
+				cell6.innerHTML = "<input type='text' class='no'>"
+								
+				cell7 = row.insertCell();
+				cell7.innerHTML = "<input type='text' class='no'>"
+				
+				cell8 = row.insertCell();
+				cell8.innerHTML = "<input type='text' class='no'>"
+				
+				cell9 = row.insertCell();
+				cell9.innerHTML = "<input type='text' class='no'>"
+				}
+			}
 	</script>
 </body>
 </html>
