@@ -84,7 +84,7 @@
 						<th>최근수정일</th>
 						<th>탈퇴여부</th>
 					</tr>
-					<tbody id="tbody" onkeyup="addrow()";>
+					<tbody id="tbody";>
 						<tr>
 							<td><input type="checkbox" name="number"></td>
 							<td><input type="text" id="no"></td>
@@ -96,7 +96,7 @@
 							<td><input type="text" class="no"></td>
 							<td><input type="text" class="no"></td>
 							<td><input type="text" class="no"></td>
-							<td><input type="text" class="no"></td>
+							<td><input type="text" class="no" onkeyup="addrow()"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -148,7 +148,7 @@
 				cell8.innerHTML = "<input type='text' class='no'>"
 				
 				cell9 = row.insertCell();
-				cell9.innerHTML = "<input type='text' class='no'>"
+				cell9.innerHTML = "<input type='text' class='no' onekeyup='addrow()'>"
 				}
 			}
 	</script>
